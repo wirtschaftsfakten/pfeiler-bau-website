@@ -234,7 +234,7 @@
         ? 'Pläne, Leistungsverzeichnis und Terminrahmen können im Projektstart direkt ergänzt werden.'
         : 'Standort, Fotos, Zeitraum und eine präzise Aufgabenbeschreibung reichen für die erste Einordnung.';
       const link = qs('a', result);
-      if (link) link.href = `${root}projekt-navigator.html?leistung=${encodeURIComponent(state.type)}#anfrage`;
+      if (link) link.href = `${root}projekt-navigator?leistung=${encodeURIComponent(state.type)}#anfrage`;
     }));
   }
 
@@ -433,7 +433,7 @@
     call.href = 'tel:+4917684322412';
     call.textContent = 'Anrufen';
     const project = document.createElement('a');
-    project.href = `${root}projekt-navigator.html#anfrage`;
+    project.href = `${root}projekt-navigator#anfrage`;
     project.textContent = 'Projekt prüfen';
     bar.append(call, project);
     body.append(bar);
